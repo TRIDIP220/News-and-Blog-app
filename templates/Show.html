@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+</style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <th>Created By</th>
+            <th>Blog</th>
+            
+            <th></th>
+          </tr>
+    {% for i in x.values %}
+
+<tr>
+
+    <td>
+        {{i.Name}}
+    </td>
+
+
+<td>
+<div class="a">
+<div class="card">
+<h1 style="background-color: crimson; color: white;">{{i.blogTopics}}</h1>
+
+  <p style="background-color:bisque;">{{i.blog}}</p>
+
+  <p><button><p>{{i.Date}}</p></button></p>
+</div>
+</td>
+
+<td>
+</div>
+<a href="del/{{i.id}}">Delete</a>
+</td>
+{% endfor %}
+<tr>
+</table>
+<a href="/home/">Home</a>
+
+</body>
+</html>
